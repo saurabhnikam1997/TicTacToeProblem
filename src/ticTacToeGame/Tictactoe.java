@@ -12,8 +12,7 @@ public class Tictactoe {
 	System.out.println("Welcome to Tictactoe Game---");
 	Tictactoe tictactoe = new Tictactoe();
 	Tictactoe.Board();
-	Tictactoe.Inputchoice();
-	
+	Tictactoe.Inputchoice();	
 }
 
 
