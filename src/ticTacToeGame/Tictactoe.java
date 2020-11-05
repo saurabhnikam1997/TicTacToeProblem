@@ -13,8 +13,6 @@ private static char[] Board() {
 		
 		board[i]=' ';
 	}
-	return board;
-		
-	
+	return board;	
 	}	
 }
