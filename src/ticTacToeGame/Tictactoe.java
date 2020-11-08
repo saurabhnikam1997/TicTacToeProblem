@@ -2,11 +2,13 @@ package ticTacToeGame;
 
 import java.util.Scanner;
 
+
 public class Tictactoe {
 	static char[] board = new char[10];
 	private static char playchoice;
 	private static char compChoice;
 	private static Scanner userInput;
+	//main method
 	public static void main(String args[]) {
 		System.out.println("---Welcome to Tictactoe Game---");
 		new Tictactoe();
@@ -15,21 +17,21 @@ public class Tictactoe {
 		Tictactoe.ShowBoard(board);
 		Tictactoe.SelectLocation(board);	
 }
-
-	private static char[] SelectLocation(char[] board2) {
+//setting index for board
+	private static char[] SelectLocation(char[] board) {
 		System.out.println("Select the index to place: "+ playchoice); 
 		int index = extracted().nextInt();
-		board2[index] = playchoice;
-		System.out.println(board2);
-		ShowBoard(board2);
+		board[index] = playchoice;
+		System.out.println(board);
+		ShowBoard(board);
 		
-		return board2;	
+		return board;	
 	}
 
 	private static Scanner extracted() {
 		return new Scanner(System.in);
 	}
-
+//method to showing the board
 	private static void ShowBoard(char[] board) {
 		System.out.println("TicTacToe Board:");
 		System.out.println("_____________");
@@ -41,6 +43,7 @@ public class Tictactoe {
 		System.out.println("‾‾‾‾‾‾‾‾‾‾‾‾‾");
 	}
 
+	//take input from user
 	private static void Inputchoice() {
 		userInput = extracted();
 		System.out.println("Choose 'X' OR 'O' as input: ");
@@ -58,8 +61,8 @@ public class Tictactoe {
 		}	
 	}
 	private static char[] Board() {
-		for (int i=1; i<board.length; i++) {
-			board[i]=' ';
+		for (int index=1; index<board.length; index++) {
+			board[index]=' ';
 		}
 		return board;
 	}
